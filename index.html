@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<div data-role="page">
+<div data-role="dialog">
   <div data-role="header">
     <h1>欢迎访问我的主页</h1>
   </div>
@@ -18,6 +18,11 @@
       <input type="button"  value="网页按钮1" onclick="window.android.startFunction()" />
       <br/>
       <input type="button"  value="网页按钮2" onclick="window.android.startFunction('心塞')"  />
+  </div>
+  
+   <div data-role="content">
+    <p>对话框与普通页面不同，它显示在当前页面的顶端。它不会横跨整个页面宽度。对话框页眉中的图标 “X” 可关闭对话框。</p>
+    <a href="#pageone">转到页面一</a>
   </div>
 
   <div data-role="footer">
