@@ -1,51 +1,232 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE>
+<html xmlns:margin="http://www.w3.org/1999/xhtml">
+
 <head>
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
-<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html charset=GBK">
 </head>
-<body>
+
+<style type="text/css">
+
+    .main_item{
+        padding-top: 20px;
+    }
+    .list_content{
+        padding-left:30px;
+    }
+    .header{
+        background-color: white 100% 100%;
+        height:30px;
+        width:100%;
+    }
+
+    #header_title{
+        width:100%;
+        height:100%;
+        text-align:center;
+        margin-top:15px;
+        font-size:18x
+    }
+
+    .banner{
+        background:url("https:\/\/phibox.phicomm.com\/public\/file\/201805\/yfEc2lPhYLps1oLlayuO9fXW7ALWutlqBvan5E3Y.png");
+        width: 100%;
+        height:180px;
+        background-size:100%  180px;
+    }
+    .main_item .img {
+        width: 40px;
+        height:44px;
+        background-size: 40px 40px;
+        float:left;
+        margin-right:20px;
+    }
+
+    .main_item .content div {
+        margin-bottom: 5px;
+    }
+    .destv{
+        font-size:12px;
+        font-family: monospace;
+        color: gray;
+    }
+
+    .allfile{
+        background: url(./img/icon_my_file.png) center no-repeat;
+    }
+    .myvideo{
+        background: url(./img/icon_my_video.png) center no-repeat;
+    }
+    .mybackup{
+        background: url(./img/icon_my_photo.png) center no-repeat;
+    }
+    .myweixin{
+        background: url(./img/icon_my_wx.png) center no-repeat;
+    }
+    .mydownload{
+        background: url(./img/icon_my_download.png) center no-repeat;
+    }
+
+    .footer{
+        position: absolute;
+        bottom:0px;
+        width: 100%;
+        height:49px;
+    }
+
+    #bottom_main{
+        width: 50%;
+        height:60px;
+        float: left;
+        text-align:center;
+        vertical-align: middle;
+    }
+
+    #bottom_mine{
+        width:50%;
+        height:60px;
+        float: right;
+        text-align:center;
+        vertical-align: middle;
+    }
+
+    #bottom_main_img{
+        background:  url(./img/home_fill.png) 50% 50% no-repeat;
+        background-size: 24px 20px;
+        width: 100%;
+        height:20px;
+        text-align:center;
+    }
+
+    #bottom_mian_tv{
+        width: 100%;
+        height:22px;
+        text-align:center;
+        font-size:13px;
+    }
+
+    #bottom_mine_img {
+        background:  url(./img/person.png) 50% 50% no-repeat;
+        background-size: 24px 22px;
+        width: 100%;
+        height:20px;
+        text-align:center;
+    }
+
+    #bottom_mine_tv{
+        width: 100%;
+        height:22px;
+        text-align:center;
+        font-size:13px
+
+    }
+
+    #main {
+        background:  url(./img/home.png) 50% 50% no-repeat;
+        background-size: 24px 22px;
+    }
+
+    #mine_fill {
+        background:  url(./img/person_fill.png) 50% 50% no-repeat;
+        background-size: 24px 22px;
+    }
+
+</style>
+
+<script>
+    $(document).ready(function(){
+        $("li").click(function(){
+            /* $("h1").css({"background-color":"yellow","font-size":"200%"});*/
+            /*      $("h1").css("font-size","200%");*/
+        });
+    });
+</script>
+
 <div data-role="page" id="pageone">
-  <div data-role="header">
-    <h1>欢迎访问我的主页</h1>
-  </div>
-
-  <div data-role="content">
-    <p>现在我已经成为一名移动开发者！</p>
-      <br/>
-      <div data-role="button">
-        <a href="#window.android.startFunction('心塞')" data-role="button" >按钮</a>
+    <div class="header">
+        <div id="header_title">斐讯云盘</div>
     </div>
-<!--       <div data="button"  value="网页按钮2" onclick="window.android.startFunction('心塞')"  /> -->
-  </div>
-  
-  <div data-role="content">
-    <p>点击链接来查看滑动效果（从右向左滑动到下一页）</p>
-    <a href="#pagetwo" data-transition="slide">滑动到页面二</a>
-  </div>
 
-  <div data-role="footer">
-  <h1>页脚文本</h1>
-  </div>
+    <div>
+        <div class="banner"></div>
+        <div class="list_content">
+            <div class="main_item">
+                <div class="img allfile"></div>
+                <div class="content">
+                    <div>全部文件</div>
+                    <div class="destv">上传保管我的各种文件</div>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+            <div class="main_item">
+                <div class="img myvideo"></div>
+                <div class="content">
+                    <div>我的影像</div>
+                    <div class="destv">自动珍藏升高的美好时光</div>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+            <div class="main_item">
+                <div class="img myweixin"></div>
+                <div class="content">
+                    <div>我的微信</div>
+                    <div class="destv">随心保存微信来往文件</div>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+            <div class="main_item">
+                <div class="img mybackup"></div>
+                <div class="content">
+                    <div>手机备份</div>
+                    <div class="destv">快速备份手机数据</div>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+            <div class="main_item">
+                <div class="img mydownload"></div>
+                <div class="content">
+                    <div>我的下载</div>
+                    <div class="destv">自动珍藏美好时光</div>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+
+        <div id="bottom_main">
+            <div id="bottom_main_img"></div>
+            <div id="bottom_mian_tv">首页</div>
+        </div>
+        <div id="bottom_mine">
+            <div id="bottom_mine_img"></div>
+            <div id="bottom_mine_tv">我的</div>
+        </div>
+
+    </div>
+
+    <div data-role="page" id="pagetwo">
+        <div data-role="header">
+            <h1>学习学习</h1>
+        </div>
+
+        <div data-role="content">
+            <p>我的页面 该页面的按钮也会被突出显示，归功于 ui-btn-active 类。</p>
+            <p>如果返回首页，您会发现页面将保持状态，归功于 ui-state-persist 类。</p>
+        </div>
+
+        <div data-role="footer" class="">
+            <div data-role="navbar">
+                <div id="main" href="#pageone"  data-icon="custom">首页</div>>
+                <div id="mine_fill" href="#" id="mine_fill" data_icon="custom">页面二</div>
+            </div>
+        </div>
+    </div>
 </div>
-  
-  <div data-role="page" id="pagetwo">
-  <div data-role="header">
-    <h1>欢迎来到我的主页</h1>
-  </div>
-  
-  <div data-role="content">
-    <p>点击链接来查看反向的滑动效果（从左向右滑动到前一页）</p>
-    <a href="#pageone" data-transition="slide" data-direction="reverse">滑动到页面一（反向）</a>
-  </div>
 
-  <div data-role="footer">
-  <h1>页脚文本</h1>
-  </div>
-</div> 
-
-</body>
-  
 </html>
 
